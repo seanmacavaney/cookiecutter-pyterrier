@@ -1,8 +1,17 @@
 import unittest
-import {{ cookiecutter.project_slug }}
+import pandas as pd
+
+from {{ cookiecutter.project_slug }} import MyAwesomeTransformer
 
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
-    """Tests for `{{ cookiecutter.project_slug }}` package."""
     def test_something(self):
-        """Test something."""
+        # Arrange
+        transformer = MyAwesomeTransformer()
+        inp = pd.DataFrame()
+
+        # Act
+        res = transformer(inp)
+
+        # Assert
+        pd.testing.assert_frame_equal(inp, res)

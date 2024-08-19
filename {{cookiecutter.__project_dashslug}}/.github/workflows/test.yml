@@ -1,3 +1,4 @@
+{% raw %}
 name: test
 
 on:
@@ -53,3 +54,4 @@ jobs:
          jq '.summary' ${{ env.runtag }}.results.json >> $GITHUB_STEP_SUMMARY
          printf "\n\n**Test Coverage**\n\n" >> $GITHUB_STEP_SUMMARY
          jq '.files | to_entries[] | " - `" + .key + "`: **" + .value.summary.percent_covered_display + "%**"' -r ${{ env.runtag }}.coverage.json >> $GITHUB_STEP_SUMMARY
+{% endraw %}

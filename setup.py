@@ -2,14 +2,14 @@
 
 from distutils.core import setup
 setup(
-    name='cookiecutter-pypackage',
+    name='cookiecutter-pyterrier',
     packages=[],
     version='0.1.0',
-    description='Cookiecutter template for a Python package',
-    author='Audrey M. Roy Greenfeld',
+    description='Cookiecutter template for a PyTerrier package',
+    author='Sean MacAvaney',
     license='BSD',
-    author_email='audrey@feldroy.com',
-    url='https://github.com/audreyfeldroy/cookiecutter-pypackage',
+    author_email='sean.macavaney@glasgow.ac.uk',
+    url='https://github.com/seanmacavaney/cookiecutter-pyterrier',
     keywords=['cookiecutter', 'template', 'package', ],
     python_requires='>=3.10',
     classifiers=[

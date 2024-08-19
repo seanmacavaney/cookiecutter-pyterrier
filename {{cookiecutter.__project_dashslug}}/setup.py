@@ -19,7 +19,7 @@ def get_requirements(path):
 
 
 setup(
-    name='{{cookiecutter.project_slug}}',
+    name='{{cookiecutter.__project_dashslug}}',
     version=get_version('{{cookiecutter.project_slug}}/__init__.py'),
     author='{{cookiecutter.full_name}}',
     author_email='{{cookiecutter.email}}',

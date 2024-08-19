@@ -4,8 +4,9 @@
   "github_username": "jdoe",
   "project_name": "PyTerrier Awesome",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "project_short_description": "PyTerrier Boilerplate",
+  "project_short_description": "PyTerrier integration with Awesome",
   "version": "0.1.0",
   "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
-  "__gh_slug": "{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+  "__gh_slug": "{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
+  "__project_dashslug": "{{ cookiecutter.project_slug.replace('_', '-') }}"
 }

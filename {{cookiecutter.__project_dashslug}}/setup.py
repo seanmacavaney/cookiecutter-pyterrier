@@ -26,7 +26,7 @@ setup(
     description="{{cookiecutter.project_short_description}}",
     long_description=open('README.md', 'r').read(),
     long_description_content_type="text/markdown",
-    url='{{cookiecutter.__gh_slug}}',
+    url='https://github.com/{{cookiecutter.__gh_slug}}',
     packages=find_packages(),
     include_package_data=True,
     entry_points={},

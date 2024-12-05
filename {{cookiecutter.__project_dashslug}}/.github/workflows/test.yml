@@ -29,23 +29,16 @@ jobs:
        uses: actions/cache@v4
        with:
          path: ${{ env.pythonLocation }}
-         key: ${{ env.runtag }}-${{ hashFiles('requirements.txt', 'requirements_dev.txt') }}
+         key: ${{ env.runtag }}-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
 
      - name: Install Dependencies
        run: |
-         pip install --upgrade -r requirements.txt -r requirements_dev.txt
+         pip install --upgrade -r requirements.txt -r requirements-dev.txt
          pip install -e .
 
      - name: Unit Test
        run: |
          pytest --durations=20 -p no:faulthandler --json-report --json-report-file ${{ env.runtag }}.results.json --cov{% endraw %} {{cookiecutter.project_slug}} {% raw %}--cov-report json:${{ env.runtag }}.coverage.json tests/
-
-     - name: Upload Test Results
-       if: always()
-       uses: actions/upload-artifact@v4
-       with:
-         path: ${{ env.runtag }}.*.json
-         overwrite: true
 
      - name: Report Test Results
        if: always()

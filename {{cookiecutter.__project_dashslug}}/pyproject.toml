@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.__project_dashslug}}"
+description = "{{cookiecutter.project_short_description}}"
+readme = "README.md"
+authors = [
+    {name = "{{cookiecutter.full_name}}", email = "{{cookiecutter.email}}"},
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Operating System :: OS Independent",
+  "Topic :: Text Processing",
+  "Topic :: Text Processing :: Indexing",
+]
+requires-python = ">=3.10"
+dynamic = ["version", "dependencies"]
+
+[tool.setuptools.dynamic]
+version = {attr = "{{cookiecutter.project_slug}}.__version__"}
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+exclude = ["tests"]
+
+[project.urls]
+Repository = "https://github.com/{{cookiecutter.__gh_slug}}"
+"Bug Tracker" = "https://github.com/{{cookiecutter.__gh_slug}}/issues"

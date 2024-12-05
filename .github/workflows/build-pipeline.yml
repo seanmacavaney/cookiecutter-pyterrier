@@ -4,11 +4,9 @@ name: Cookiecutter PyPackage CI build
 on:
   push:
     branches:
-      - master
       - main
   pull_request:
     branches:
-      - master
       - main
 jobs:
   build:
@@ -32,7 +30,7 @@ jobs:
           python -m pip install --user --upgrade build
           python -m build
       - name: Archive package
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: cookie-cutter
           path: src/dist
